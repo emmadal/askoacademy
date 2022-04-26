@@ -23,7 +23,7 @@ const Menu = () => {
   return (
     <MDBNavbar expand="md" light bgColor="light">
       <MDBContainer fluid className="p-2">
-        <MDBNavbarBrand className="mx-2" href="#">
+        <MDBNavbarBrand href="#">
           LOGO
         </MDBNavbarBrand>
         <MDBNavbarToggler
@@ -37,19 +37,13 @@ const Menu = () => {
 
         <MDBCollapse navbar show={showBasic}>
           <MDBNavbarNav className="ms-auto mb-2 mb-lg-0 justify-content-end">
-            <MDBNavbarItem className="mx-2">
-              <MDBNavbarLink href="#" className="text-black">
-                Pourquoi Askoacademy
-              </MDBNavbarLink>
-            </MDBNavbarItem>
-
-            <MDBNavbarItem className="mx-2">
+            <MDBNavbarItem >
               <MDBNavbarLink className="text-black" href="#">
                 Coaching
               </MDBNavbarLink>
             </MDBNavbarItem>
 
-            <MDBNavbarItem className="mx-2">
+            <MDBNavbarItem >
               <MDBDropdown>
                 <MDBDropdownToggle tag="a" className="nav-link text-black">
                   Cours à domicile
@@ -67,7 +61,7 @@ const Menu = () => {
               </MDBDropdown>
             </MDBNavbarItem>
 
-            <MDBNavbarItem className="mx-2">
+            <MDBNavbarItem>
               <MDBDropdown>
                 <MDBDropdownToggle tag="a" className="nav-link text-black">
                   Formations
@@ -83,8 +77,8 @@ const Menu = () => {
               </MDBDropdown>
             </MDBNavbarItem>
 
-            <MDBNavbarItem className="mx-2">
-              <MDBBtn color="primary">Devenir Professeur</MDBBtn>
+            <MDBNavbarItem>
+              <MDBBtn rounded color="primary">Connexion</MDBBtn>
             </MDBNavbarItem>
           </MDBNavbarNav>
         </MDBCollapse>

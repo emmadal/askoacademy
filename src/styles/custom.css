@@ -1,0 +1,129 @@
+/* --- Background Image --- */
+.banner-1 {
+  padding-top: 180px;
+  padding-bottom: 180px;
+}
+.has-overlay {
+  position: relative;
+  z-index: 1;
+}
+.bg-cover {
+  background-image: url('../assets/assistante.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.has-overlay {
+  position: relative;
+  z-index: 1;
+}
+.banner-1.has-overlay::after, .banner-3.has-overlay::after {
+    background-color: #001B61;
+    opacity: .4;
+}
+.has-overlay::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+}
+/* --- Background Image --- */
+
+/* --- features Area --- */
+.features__inner {
+  margin-top: -70px;
+  padding: 40px 60px 10px;
+  -ms-box-shadow: 0 30px 50px rgba(26,31,35,.07);
+  -o-box-shadow: 0 30px 50px rgba(26,31,35,.07);
+  box-shadow: 0 30px 50px rgb(26 31 35 / 7%);
+}
+.white-bg {
+  background: white;
+}
+.p-relative {
+  position: relative;
+}
+.z-index-1 {
+  z-index: 1;
+}
+.features__border-right {
+  position: relative;
+}
+.features__item {
+  padding-right: 55px;
+}
+.mb-30 {
+  margin-bottom: 30px;
+}
+.white-bg {
+  background: white;
+}
+.align-items-start {
+  align-items: flex-start!important;
+}
+
+.features__content p{
+  line-height:20px;
+  margin-bottom:10px;
+}
+.features__title{
+  font-size:19px;
+  font-weight:600;
+  margin-bottom:5px;
+}
+.features__title p:hover{
+  color:#d63384;
+}
+.features__border-right{
+  position:relative;
+}
+.features__border-right:after{
+  position:absolute;
+  content:"";
+  right:5px;
+  top:50%;
+  transform:translateY(-50%);
+  background-color:rgba(3,18,32,.1);
+  height:120px;
+  width:1px;
+}
+@media (max-width:575px),only screen and (min-width:576px)and (max-width:767px){
+  .features__border-right:after{
+    display:none;
+  }
+}
+
+
+
+/* --- features Area --- */
+
+
+
+
+.intro-title {
+    padding: 35px;
+    list-style: none;
+}
+
+.intro-area-inner {
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.bg-black {
+    background: #262a2f;
+}
+
+ul li {
+  list-style: none;
+}
+
+.single-intro-inner {
+  padding: 10px;
+  border-radius: 7px;
+  background-color: #262a2f;
+}
