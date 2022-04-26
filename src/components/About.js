@@ -7,8 +7,8 @@ import {
 
 const About = () => {
   return (
-    <MDBContainer>
-      <MDBRow className="justify-content-center">
+    <MDBContainer className="my-5">
+      <MDBRow>
         <MDBCol className="text-center">
           <h2 className="section-title mt-4">
             Pourquoi <span className="has-line"> Askoacademy ?</span>
