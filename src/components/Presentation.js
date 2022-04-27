@@ -7,8 +7,8 @@ const Presentation = () => {
       <MDBRow className="banner-1 has-overlay bg-cover">
         <MDBCol className="text-white">
           <MDBTypography tag="h4" className="text-white display-4 fw-bold">
-            Vous souhaitez avoir une formation ou un coaching quelque soit votre
-            lieu d'habitation ?
+            Vous souhaitez avoir une formation ou un coaching quelque soit
+            votre lieu d'habitation ?
           </MDBTypography>
           <MDBTypography tag="h6" className="display-6 ">
             L'education devient de plus en plus simple.
