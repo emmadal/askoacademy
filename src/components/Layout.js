@@ -3,6 +3,7 @@ import Menu from "./Menu"
 import Presentation from "./Presentation"
 import About from "./About";
 import BrowseCourse from "./BrowseCourse";
+import BecomeInstructor from "./BecomeInstructor";
 import "../styles/custom.css"
 
 const Layout = () => {
@@ -12,6 +13,7 @@ const Layout = () => {
         <Presentation />
         <About />
         <BrowseCourse />
+        <BecomeInstructor />
       </div>
     );
 }

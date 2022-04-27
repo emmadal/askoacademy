@@ -4,7 +4,7 @@ const BrowseCourse = () => {
   return (
     <div className="css-whvxmy-Home">
       <h3 id="career" className="css-3ejmj1-Home text-white fw-bold">
-        Launch your career
+        TYPE D'ENSEIGNEMENT
       </h3>
       <div className="css-104js7c-Home mt-3">
         <a

@@ -8,7 +8,6 @@ import {
   MDBNavbarNav,
   MDBNavbarItem,
   MDBNavbarLink,
-  MDBBtn,
   MDBDropdown,
   MDBDropdownToggle,
   MDBDropdownMenu,
@@ -23,9 +22,7 @@ const Menu = () => {
   return (
     <MDBNavbar expand="md" light bgColor="light">
       <MDBContainer fluid className="p-2">
-        <MDBNavbarBrand href="#">
-          LOGO
-        </MDBNavbarBrand>
+        <MDBNavbarBrand href="#">LOGO</MDBNavbarBrand>
         <MDBNavbarToggler
           aria-controls="navbarSupportedContent"
           aria-expanded="false"
@@ -37,22 +34,20 @@ const Menu = () => {
 
         <MDBCollapse navbar show={showBasic}>
           <MDBNavbarNav className="ms-auto mb-2 mb-lg-0 justify-content-end">
-            <MDBNavbarItem >
+            <MDBNavbarItem>
               <MDBNavbarLink className="text-black" href="#">
                 Coaching
               </MDBNavbarLink>
             </MDBNavbarItem>
 
-            <MDBNavbarItem >
+            <MDBNavbarItem>
               <MDBDropdown>
                 <MDBDropdownToggle tag="a" className="nav-link text-black">
                   Cours à domicile
                 </MDBDropdownToggle>
-                <MDBDropdownMenu >
+                <MDBDropdownMenu>
                   <MDBDropdownItem>
-                    <MDBDropdownLink>
-                      En présentiel
-                    </MDBDropdownLink>
+                    <MDBDropdownLink>En présentiel</MDBDropdownLink>
                   </MDBDropdownItem>
                   <MDBDropdownItem>
                     <MDBDropdownLink href="#">En ligne</MDBDropdownLink>
@@ -78,7 +73,9 @@ const Menu = () => {
             </MDBNavbarItem>
 
             <MDBNavbarItem>
-              <MDBBtn rounded color="primary">Connexion</MDBBtn>
+              <a className="tp-btn tp-btn-4" href="h">
+                Connexion
+              </a>
             </MDBNavbarItem>
           </MDBNavbarNav>
         </MDBCollapse>

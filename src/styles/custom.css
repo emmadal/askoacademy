@@ -133,11 +133,11 @@
     box-sizing: border-box;
     margin: 0;
     min-width: 0;
-    font-size: 1.9rem;
+    font-size: 1.3rem;
     letter-spacing: -0.5px;
     line-height: 1.2;
     margin-top: 0;
-    max-width: 548px;
+    /* max-width: 548px; */
     margin-left: auto;
     margin-right: auto;
     padding-bottom: 24px;
@@ -270,3 +270,79 @@
   z-index: 1;
 }
 /* --- Learning Path --- */
+
+/* --- Become Instructor ---*/
+.cta__inner {
+  border-top: 1px solid rgba(61,108,231,.1);
+  margin-top: 60px;
+}
+.cta__item-border {
+    border-right: 1px solid rgba(61,108,231,.1);
+}
+.pr-110 {
+    padding-right: 110px;
+}
+.pb-15 {
+    padding-bottom: 15px;
+}
+.pt-40 {
+    padding-top: 40px;
+}
+@media (min-width: 576px){
+  .d-sm-flex {
+    display: flex!important;
+}
+}
+
+.align-items-start {
+    align-items: flex-start!important;
+}
+
+.cta__title {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+.mr-30 {
+    margin-right: 30px;
+}
+.cta__icon span {
+    display: inline-block;
+    width: 90px;
+    height: 90px;
+    line-height: 90px;
+    text-align: center;
+    background-color: #fff1e0;
+    border-radius: 50%;
+}
+.tp-btn-3 {
+    height: 44px;
+    line-height: 44px;
+    padding: 0 27px;
+    background-color: #f1f1f1;
+    color: #031220;
+}
+.tp-btn {
+    display: inline-block;
+    font-size: 15px;
+    font-weight: 500;
+    padding: 0 30px;
+    height: 50px;
+    line-height: 50px;
+    text-transform: capitalize;
+}
+
+.tp-btn-4 {
+    height: 44px;
+    line-height: 44px;
+    padding: 0 27px;
+    background-color: #3d6ce7;
+    color: #f1f1f1;
+}
+
+.tp-btn:focus, .tp-btn:hover {
+    color: #f1f1f1;
+    background-color: #031220;
+}
+/* -- Become Instructor --*/
+

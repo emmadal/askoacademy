@@ -1,21 +1,18 @@
 import React, { memo } from "react";
-import { MDBContainer, MDBRow, MDBCol, MDBTypography,MDBBtn } from "mdb-react-ui-kit";
+import { MDBContainer, MDBRow, MDBCol, MDBTypography } from "mdb-react-ui-kit";
 
 const Presentation = () => {
   return (
     <MDBContainer fluid>
       <MDBRow className="banner-1 has-overlay bg-cover">
         <MDBCol className="text-white">
-          <MDBTypography tag="h4" className="text-white display-4 mt-5 fw-bold">
+          <MDBTypography tag="h4" className="text-white display-4 fw-bold">
             Vous souhaitez avoir une formation ou un coaching quelque soit votre
             lieu d'habitation ?
           </MDBTypography>
-          <MDBTypography tag="h6" className="display-6 my-3">
+          <MDBTypography tag="h6" className="display-6 ">
             L'education devient de plus en plus simple.
           </MDBTypography>
-          <MDBBtn rounded size="lg" color="primary">
-            En savoir plus
-          </MDBBtn>
         </MDBCol>
       </MDBRow>
       <div className="features__inner p-relative z-index-1 white-bg mb-5">
