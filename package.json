@@ -1,7 +1,7 @@
 {
   "name": "askoacademy",
   "version": "0.1.0",
-  "homepage": "https://awaitstack.github.io",
+  "homepage": "https://awaitstack.github.io/askoacademy/",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
