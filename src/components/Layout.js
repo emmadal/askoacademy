@@ -1,7 +1,6 @@
 import { memo } from "react";
 import Menu from "./Menu";
 import Footer from "./Footer";
-import "../styles/custom.css";
 
 const Layout = ({ children }) => {
   return (

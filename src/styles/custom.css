@@ -346,3 +346,42 @@
 }
 /* -- Become Instructor --*/
 
+/* -- Contact --*/
+.dc-account__wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.ctact_input {
+  margin: 20px 0px;
+}
+.tabbed-pane_2DfHq {
+  margin-left: auto;
+  margin-right: auto;
+  -webkit-box-shadow: 2px 2px 3px 0 rgb(117 124 129 / 12%);
+  box-shadow: 2px 2px 3px 0 rgb(117 124 129 / 12%);
+  min-width: 500px;
+  border: 1px solid #c8cdd2;
+  text-align: center;
+}
+
+.form_wrapper {
+  padding: 0px 40px;
+}
+
+@media (max-width:575px),only screen and (min-width:576px)and (max-width:767px){
+  .tabbed-pane_2DfHq{
+    min-width: 380px;
+    border: none;
+    box-shadow:none;
+  }
+}
+
+.vds-text {
+  font-size: 1rem;
+  line-height: 2rem;
+  max-width: 30rem;
+}
+/* -- Contact --*/
+
