@@ -4,7 +4,7 @@ import Footer from "./Footer";
 
 const Layout = ({ children }) => {
   return (
-    <div>
+    <div data-bs-spy="scroll">
       <Menu />
       {children}
       <Footer />

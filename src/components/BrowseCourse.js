@@ -2,9 +2,9 @@ import React, { memo } from "react";
 
 const BrowseCourse = () => {
   return (
-    <div className="css-whvxmy-Home">
+    <div className="css-whvxmy-Home pt-2 mb-5" id="typeformations">
       <h3 id="career" className="css-3ejmj1-Home text-white fw-bold">
-        TYPE D'ENSEIGNEMENT
+        TYPE DE FORMATIONS
       </h3>
       <div className="css-104js7c-Home mt-3">
         <a

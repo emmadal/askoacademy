@@ -1,4 +1,5 @@
 import React, { memo } from "react";
+import { Link } from "react-router-dom";
 
 const BecomeInstructor = () => {
   return (
@@ -41,9 +42,9 @@ const BecomeInstructor = () => {
                   Askoacademy vous donne les outils nécessaires pour devenir
                   instructeur.
                 </p>
-                <a className="tp-btn tp-btn-3" href="/contact">
+                <Link className="tp-btn tp-btn-3" to="contact">
                   Enseignez maintenant
-                </a>
+                </Link>
               </div>
             </div>
           </div>
@@ -75,9 +76,9 @@ const BecomeInstructor = () => {
                   Étudiants, Lycéens, Collégiens et Travailleurs, enregistrez
                   vous pour bénéficiez des formations ou de coaching.
                 </p>
-                <a className="tp-btn tp-btn-4" href="h">
+                <Link className="tp-btn tp-btn-4" to="contact">
                   S'enregistrez
-                </a>
+                </Link>
               </div>
             </div>
           </div>

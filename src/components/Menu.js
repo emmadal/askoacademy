@@ -1,28 +1,35 @@
-import React, { useState, memo } from 'react';
+import React, { useState, memo, useCallback } from 'react';
 import {
   MDBContainer,
   MDBNavbar,
-  MDBNavbarBrand,
   MDBNavbarToggler,
   MDBIcon,
   MDBNavbarNav,
   MDBNavbarItem,
   MDBNavbarLink,
-  MDBDropdown,
-  MDBDropdownToggle,
-  MDBDropdownMenu,
-  MDBDropdownItem,
-  MDBDropdownLink,
   MDBCollapse
 } from 'mdb-react-ui-kit';
+import { Link } from 'react-router-dom';
 
 const Menu = () => {
   const [showBasic, setShowBasic] = useState(false);
 
+  const scollToTop = useCallback(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
-    <MDBNavbar expand="md" light bgColor="light">
+    <MDBNavbar
+      expand="md"
+      light
+      bgColor="light"
+      fixed="top"
+      id="navbar-example"
+    >
       <MDBContainer fluid className="p-2">
-        <MDBNavbarBrand href="#">LOGO</MDBNavbarBrand>
+        <Link to="/" className="text-black" onClick={scollToTop}>
+          LOGO
+        </Link>
         <MDBNavbarToggler
           aria-controls="navbarSupportedContent"
           aria-expanded="false"
@@ -35,47 +42,19 @@ const Menu = () => {
         <MDBCollapse navbar show={showBasic}>
           <MDBNavbarNav className="ms-auto mb-2 mb-lg-0 justify-content-end">
             <MDBNavbarItem>
-              <MDBNavbarLink className="text-black" href="#">
-                Coaching
+              <MDBNavbarLink className="text-black" href="#pourquoiaskoacademy">
+                Présentation
               </MDBNavbarLink>
             </MDBNavbarItem>
-
             <MDBNavbarItem>
-              <MDBDropdown>
-                <MDBDropdownToggle tag="a" className="nav-link text-black">
-                  Cours à domicile
-                </MDBDropdownToggle>
-                <MDBDropdownMenu>
-                  <MDBDropdownItem>
-                    <MDBDropdownLink>En présentiel</MDBDropdownLink>
-                  </MDBDropdownItem>
-                  <MDBDropdownItem>
-                    <MDBDropdownLink href="#">En ligne</MDBDropdownLink>
-                  </MDBDropdownItem>
-                </MDBDropdownMenu>
-              </MDBDropdown>
+              <MDBNavbarLink className="text-black" href="#typeformations">
+                Type de formations
+              </MDBNavbarLink>
             </MDBNavbarItem>
-
             <MDBNavbarItem>
-              <MDBDropdown>
-                <MDBDropdownToggle tag="a" className="nav-link text-black">
-                  Formations
-                </MDBDropdownToggle>
-                <MDBDropdownMenu>
-                  <MDBDropdownItem>
-                    <MDBDropdownLink>En présentiel</MDBDropdownLink>
-                  </MDBDropdownItem>
-                  <MDBDropdownItem>
-                    <MDBDropdownLink>En ligne</MDBDropdownLink>
-                  </MDBDropdownItem>
-                </MDBDropdownMenu>
-              </MDBDropdown>
-            </MDBNavbarItem>
-
-            <MDBNavbarItem>
-              <a className="tp-btn tp-btn-4" href="h">
+              <Link to="contact" className="tp-btn tp-btn-4">
                 Connexion
-              </a>
+              </Link>
             </MDBNavbarItem>
           </MDBNavbarNav>
         </MDBCollapse>

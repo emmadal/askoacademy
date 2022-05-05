@@ -1,3 +1,12 @@
+/* --- Loading --- */
+.loading{
+  display: flex;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+/* --- Loading --- */
+
 /* --- Background Image --- */
 .banner-1 {
   padding-top: 180px;
