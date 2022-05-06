@@ -6,6 +6,7 @@ import Loading from "./components/Loading";
 const HomePage = lazy(() => import("./pages/HomePage"));
 const Contact = lazy(() => import("./pages/Contact"));
 const Client = lazy(() => import("./pages/Client"));
+const Mentors = lazy(() => import("./pages/Mentors"));
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <Suspense fallback={<Loading />}>
         <Routes>
           <Route index path="/" element={<HomePage />} />
+          <Route path="/mentors" element={<Mentors />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/client" element={<Client />} />
         </Routes>

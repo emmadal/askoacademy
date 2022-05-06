@@ -52,6 +52,13 @@ const Menu = () => {
               </MDBNavbarLink>
             </MDBNavbarItem>
             <MDBNavbarItem>
+              <MDBNavbarLink className="text-black">
+                <Link to="/mentors" className="text-black">
+                  Mentors
+                </Link>
+              </MDBNavbarLink>
+            </MDBNavbarItem>
+            <MDBNavbarItem>
               <Link to="contact" className="tp-btn tp-btn-4">
                 Connexion
               </Link>
