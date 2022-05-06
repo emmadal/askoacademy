@@ -5,18 +5,16 @@ import Loading from "./components/Loading";
 
 const HomePage = lazy(() => import("./pages/HomePage"));
 const Contact = lazy(() => import("./pages/Contact"));
+const Client = lazy(() => import("./pages/Client"));
 
 function App() {
   return (
     <BrowserRouter basename={process.env.PUBLIC_URL}>
       <Suspense fallback={<Loading />}>
         <Routes>
-          <Route
-            index
-            path="/"
-            element={<HomePage />}
-          />
+          <Route index path="/" element={<HomePage />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/client" element={<Client />} />
         </Routes>
       </Suspense>
     </BrowserRouter>
