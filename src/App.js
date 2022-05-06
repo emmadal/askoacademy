@@ -10,7 +10,7 @@ const Mentors = lazy(() => import("./pages/Mentors"));
 
 function App() {
   return (
-    <BrowserRouter basename={process.env.PUBLIC_URL}>
+    <BrowserRouter>
       <Suspense fallback={<Loading />}>
         <Routes>
           <Route index path="/" element={<HomePage />} />

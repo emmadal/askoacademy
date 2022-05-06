@@ -1,5 +1,4 @@
-import { memo, useEffect } from "react";
-import Avatar from "react-avatar";
+import { memo } from "react";
 import { Link } from "react-router-dom";
 
 const InstructorMenu = () => {
@@ -16,12 +15,12 @@ const InstructorMenu = () => {
         </div>
         <ul>
           <li>
-            <a href="#" className="active">
+            <Link to="" className="active">
               <span className="icon">
                 <i className="fas fa-home"></i>
               </span>
               <span className="item">Acceuil</span>
-            </a>
+            </Link>
           </li>
           {/* <li>
             <a href="#">
@@ -32,44 +31,44 @@ const InstructorMenu = () => {
             </a>
           </li> */}
           <li>
-            <a href="#">
+            <Link to="">
               <span className="icon">
                 <i className="fas fa-user-friends"></i>
               </span>
               <span className="item">Clients</span>
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#">
+            <Link to="">
               <span className="icon">
                 <i className="fas fa-tachometer-alt"></i>
               </span>
               <span className="item">Activité</span>
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#">
+            <Link to="">
               <span className="icon">
                 <i className="fas fa-database"></i>
               </span>
               <span className="item">Diffusion</span>
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#">
+            <Link to="">
               <span className="icon">
                 <i className="fas fa-chart-line"></i>
               </span>
               <span className="item">Rapports</span>
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#">
+            <Link to="">
               <span className="icon">
                 <i className="fas fa-power-off"></i>
               </span>
               <span className="item">Deconnexion</span>
-            </a>
+            </Link>
           </li>
         </ul>
       </div>

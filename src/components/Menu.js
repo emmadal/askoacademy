@@ -40,23 +40,24 @@ const Menu = () => {
         </MDBNavbarToggler>
 
         <MDBCollapse navbar show={showBasic}>
-          <MDBNavbarNav className="ms-auto mb-2 mb-lg-0 justify-content-end">
+          <MDBNavbarNav className="ms-auto mb-2 mb-lg-0 align-items-center  justify-content-end">
             <MDBNavbarItem>
-              <MDBNavbarLink className="text-black" href="#pourquoiaskoacademy">
+              <MDBNavbarLink
+                className="text-black mx-2"
+                href="#pourquoiaskoacademy"
+              >
                 Présentation
               </MDBNavbarLink>
             </MDBNavbarItem>
             <MDBNavbarItem>
-              <MDBNavbarLink className="text-black" href="#typeformations">
+              <MDBNavbarLink className="text-black mx-2" href="#typeformations">
                 Type de formations
               </MDBNavbarLink>
             </MDBNavbarItem>
             <MDBNavbarItem>
-              <MDBNavbarLink className="text-black">
-                <Link to="/mentors" className="text-black">
-                  Mentors
-                </Link>
-              </MDBNavbarLink>
+              <Link to="/mentors" className="text-black mx-2">
+                Mentors
+              </Link>
             </MDBNavbarItem>
             <MDBNavbarItem>
               <Link to="contact" className="tp-btn tp-btn-4">
