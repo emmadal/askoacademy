@@ -494,3 +494,32 @@
 }
 /* -- Contact --*/
 
+/* -- Zoom view --*/
+main {
+  width: 70%;
+  margin: 0;
+  text-align: center;
+  padding-left: 50px;
+}
+
+main button {
+  margin-top: 20px;
+  background-color: #2D8CFF;
+  color: #ffffff;
+  text-decoration: none;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 40px;
+  padding-right: 40px;
+  display: inline-block;
+  border-radius: 10px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+main button:hover {
+  background-color: #2681F2;
+}
+/* -- Zoom view --*/
+

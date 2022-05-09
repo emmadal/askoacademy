@@ -3,7 +3,7 @@
   publish = "build"
 
 [build.environment]
-  GENERATE_SOURCEMAP = "true"
+  GENERATE_SOURCEMAP = "false"
 
 [build.production.environment]
   GENERATE_SOURCEMAP = "false"

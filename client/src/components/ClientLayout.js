@@ -1,12 +1,10 @@
 import { memo } from "react";
 import ClientMenu from "./ClientMenu";
-import InstructorMenu from "./InstructorMenu";
 
 const ClientLayout = ({ children }) => {
-  const status = "";
   return (
     <div>
-      {status === "others" ? <ClientMenu /> : <InstructorMenu />}
+     <ClientMenu /> 
       <div>{children}</div>
     </div>
   );

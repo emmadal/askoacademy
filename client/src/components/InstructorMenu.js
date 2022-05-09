@@ -22,14 +22,6 @@ const InstructorMenu = () => {
               <span className="item">Acceuil</span>
             </Link>
           </li>
-          {/* <li>
-            <a href="#">
-              <span className="icon">
-                <i className="fas fa-user-shield"></i>
-              </span>
-              <span className="item">Admin</span>
-            </a>
-          </li> */}
           <li>
             <Link to="">
               <span className="icon">
@@ -49,7 +41,7 @@ const InstructorMenu = () => {
           <li>
             <Link to="">
               <span className="icon">
-                <i className="fas fa-database"></i>
+                <i className="fas fa-tv"></i>
               </span>
               <span className="item">Diffusion</span>
             </Link>

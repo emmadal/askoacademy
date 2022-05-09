@@ -1,12 +1,12 @@
 import "./styles/custom.css";
-import { Suspense, lazy } from 'react';
+import { Suspense, lazy } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Loading from "./components/Loading";
-
 const HomePage = lazy(() => import("./pages/HomePage"));
 const Contact = lazy(() => import("./pages/Contact"));
 const Client = lazy(() => import("./pages/Client"));
 const Mentors = lazy(() => import("./pages/Mentors"));
+const Instructors = lazy(() => import("./pages/Instructors"));
 
 function App() {
   return (
@@ -16,7 +16,8 @@ function App() {
           <Route index path="/" element={<HomePage />} />
           <Route path="/mentors" element={<Mentors />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/client" element={<Client />} />
+          <Route path="/clients" element={<Client />} />
+          <Route path="/instructors" element={<Instructors />} />
         </Routes>
       </Suspense>
     </BrowserRouter>
