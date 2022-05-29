@@ -1,3 +1,11 @@
+/*Page*/
+.page-content{
+  display: flex;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+/*Page*/
 /* sidebar */
 .sidebar {
   position: fixed;

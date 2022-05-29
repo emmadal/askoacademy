@@ -7,7 +7,7 @@ const InstructorMenu = () => {
       <div className="position-sticky">
         <ul className="nav flex-column p-2 align-items-center">
           <li className="py-3 ">
-            <Link to="/dashboard">
+            <Link to="/instructors">
               <img
                 src="/logo192.png"
                 loading="lazy"
@@ -19,7 +19,7 @@ const InstructorMenu = () => {
             </Link>
           </li>
           <li className="py-3">
-            <Link to="/dashboard" className="link">
+            <Link to="/instructors" className="link">
               <i className="fa-solid fa-house fa-2xl">Accueil</i>
             </Link>
           </li>
@@ -29,22 +29,17 @@ const InstructorMenu = () => {
             </Link>
           </li>
           <li className="py-3">
-            <Link to="/activite" className="link">
+            <Link to="/activity" className="link">
               <i className="fas fa-tachometer-alt">Activité</i>
             </Link>
           </li>
           <li className="py-3" onClick={() => ""}>
-            <Link to="/diffusion" className="link">
+            <Link to="/broadcasting" className="link">
               <i className="fas fa-tv">Diffusion</i>
             </Link>
           </li>
           <li className="py-3" onClick={() => ""}>
-            <Link to="/diffusion" className="link">
-              <i className="fas fa-tv">Diffusion</i>
-            </Link>
-          </li>
-          <li className="py-3" onClick={() => ""}>
-            <Link to="/diffusion" className="link">
+            <Link to="/reports" className="link">
               <i className="fas fa-tv">Rapports</i>
             </Link>
           </li>

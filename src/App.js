@@ -1,25 +1,34 @@
 import "./styles/custom.css";
-import { Suspense, lazy } from "react";
+import { Suspense, useId } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Loading from "./components/Loading";
-const HomePage = lazy(() => import("./pages/HomePage"));
-const Contact = lazy(() => import("./pages/Contact"));
-const Client = lazy(() => import("./pages/Client"));
-const Mentors = lazy(() => import("./pages/Mentors"));
-const Instructors = lazy(() => import("./pages/Instructors"));
+import NotFound from "./pages/NotFound";
+import { publicRoutes, protectedRoutes } from "./routes";
 
 function App() {
   return (
     <BrowserRouter>
-      <Suspense fallback={<Loading />}>
-        <Routes>
-          <Route index path="/" element={<HomePage />} />
-          <Route path="/mentors" element={<Mentors />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/clients" element={<Client />} />
-          <Route path="/instructors" element={<Instructors />} />
-        </Routes>
-      </Suspense>
+      <Routes>
+        {publicRoutes.map((route) => (
+          <Route
+            key={useId}
+            path={route.path}
+            element={route.component}
+            index={route.index}
+          />
+        ))}
+        {
+          protectedRoutes.map((route) => (
+            <Route
+              key={useId}
+              path={route.path}
+              element={
+                <Suspense fallback={<Loading />}>{route.component}</Suspense>
+              }
+            />
+          ))}
+        <Route path="*" element={<NotFound />} />
+      </Routes>
     </BrowserRouter>
   );
 }

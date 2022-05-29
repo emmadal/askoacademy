@@ -1,12 +1,12 @@
 import { memo } from "react";
 import InstructorLayout from "../components/InstructorLayout";
 
-const Client = () => {
+const Reports = () => {
   return (
-    <InstructorLayout title="Client">
-      <h1 className="pt-5">Client page</h1>
+    <InstructorLayout title="Rapport">
+      <h1 className="pt-5">Report page</h1>
     </InstructorLayout>
   );
 };
 
-export default memo(Client);
+export default memo(Reports);

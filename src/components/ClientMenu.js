@@ -8,7 +8,7 @@ const ClientMenu = () => {
       <div className="position-sticky">
         <ul className="nav flex-column p-2 align-items-center">
           <li className="py-3 ">
-            <Link to="/dashboard">
+            <Link to="/#">
               <img
                 src="/logo192.png"
                 loading="lazy"
@@ -20,23 +20,23 @@ const ClientMenu = () => {
             </Link>
           </li>
           <li className="py-3">
-            <Link to="/dashboard" className="link">
-              <i className="fa-solid fa-house fa-2xl">Accueil</i>
-            </Link>
-          </li>
-          <li className="py-3">
-            <Link to="/programmes" className="link">
-              <i className="fa-solid fa-bell fa-2xl">Programmes</i>
-            </Link>
-          </li>
-          <li className="py-3">
-            <Link to="/reunion" className="link">
-              <i className="fa-solid fa-user fa-2xl">Rèunion</i>
-            </Link>
-          </li>
-          <li className="py-3 poweroff" onClick={() => ''}>
             <Link to="/#" className="link">
-              <i className="fa-solid fa-power-off fa-2xl">Déconnexion</i>
+              Accueil
+            </Link>
+          </li>
+          <li className="py-3">
+            <Link to="/programs" className="link">
+              Programmes
+            </Link>
+          </li>
+          <li className="py-3">
+            <Link to="/meeting" className="link">
+              Reunion
+            </Link>
+          </li>
+          <li className="py-3 poweroff" onClick={() => ""}>
+            <Link to="/#" className="link">
+              Déconnexion
             </Link>
           </li>
         </ul>
