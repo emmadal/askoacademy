@@ -14,17 +14,23 @@ import {
   MDBNavbarNav,
   MDBNavbarItem,
 } from "mdb-react-ui-kit";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { loginUser, registerUser } from "../api";
+import Alert from "../components/Alert";
 
 const Contact = () => {
   const [justifyActive, setJustifyActive] = useState("tab1");
   const [user, setUser] = useState({
     firstname: "",
     lastname: "",
+    type: "",
     email: "",
     password: "",
     confirm_pass: "",
+    phone_number: ""
   });
+  const [err, setErr] = useState('')
+  const navigate = useNavigate()
 
   const handleJustifyClick = (value) => {
     if (value === justifyActive) {
@@ -33,14 +39,27 @@ const Contact = () => {
     setJustifyActive(value);
   };
 
-  const handleSignup = (e) => {
+  const handleSignup = async (e) => {
     e.preventDefault();
-    console.log(user);
+    if (user.password === user.confirm_pass) {
+      const req = await registerUser(user);
+      if (req.success) {
+        console.log(req);
+      } else {
+        setErr(req.message);
+      }
+    } 
   };
 
-  const handleSignin = (e) => {
+  const handleSignin = async (e) => {
     e.preventDefault();
-    console.log(user);
+    const req = await loginUser(user.email, user.password);
+    if (req.success){
+      localStorage.setItem('token', req.data.token)
+      navigate("/instructors", { replace: true });
+    } else {
+      setErr(req.message)
+    }
   };
 
   const handleChange = (e) => {
@@ -111,11 +130,25 @@ const Contact = () => {
                     value={user.firstname}
                     type="text"
                   />
-                  <select className="form-outline form-control form-control-lg">
+                  <MDBInput
+                    className="ctact_input form-control"
+                    size="lg"
+                    label="Numéro de telephone (Ex: 0707070707)"
+                    onChange={handleChange}
+                    name="phone_number"
+                    value={user.phone_number}
+                    type="text"
+                  />
+                  <select
+                    value={user.type}
+                    name="type"
+                    className="form-outline form-control form-control-lg"
+                    onChange={handleChange}
+                  >
                     <option>Status social</option>
                     <option value="coach">Coach</option>
-                    <option value="professeur">Professeur</option>
-                    <option value="autres">Autres</option>
+                    <option value="teacher">Professeur</option>
+                    <option value="student">Etudiant - Lycéen - Ecolier</option>
                   </select>
                   <MDBInput
                     className="ctact_input form-control"
@@ -131,7 +164,7 @@ const Contact = () => {
                     size="lg"
                     label="Mot de passe"
                     onChange={handleChange}
-                    value={user.lastname}
+                    value={user.password}
                     name="password"
                     type="password"
                   />
@@ -148,6 +181,7 @@ const Contact = () => {
                     En cliquant sur S'inscrire, vous acceptez nos Conditions
                     d'utilisation et notre Politique de confidentialité.
                   </p>
+                  {err && <Alert type="alert-warning" message={err} />}
                   <MDBBtn className="tp-btn-3 mb-3" type="submit">
                     Creer un compte
                   </MDBBtn>
@@ -176,7 +210,7 @@ const Contact = () => {
                     size="lg"
                     label="Mot de passe"
                     onChange={handleChange}
-                    value={user.lastname}
+                    value={user.password}
                     name="password"
                     type="password"
                   />
