@@ -1,7 +1,7 @@
 const Alert = ({message, type}) => {
     return (
       <div
-        className={`alert ${type} alert-dismissible fade show my-2`}
+        className={`alert ${type} alert-dismissible fade show`}
         role="alert"
       >
         {message}

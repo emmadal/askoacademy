@@ -4,7 +4,7 @@ import InstructorLayout from "../components/InstructorLayout";
 const Client = () => {
   return (
     <InstructorLayout title="Client">
-      <h1 className="pt-5">Client page</h1>
+      <h3 className="pt-5">Liste des clients</h3>
     </InstructorLayout>
   );
 };

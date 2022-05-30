@@ -1,4 +1,4 @@
-import { useState, memo } from "react";
+import { useState, memo, useContext } from "react";
 import {
   MDBContainer,
   MDBCol,
@@ -17,10 +17,11 @@ import {
 import { Link, useNavigate } from "react-router-dom";
 import { loginUser, registerUser } from "../api";
 import Alert from "../components/Alert";
+import { UserAuth } from "../App";
 
 const Contact = () => {
   const [justifyActive, setJustifyActive] = useState("tab1");
-  const [user, setUser] = useState({
+  const [user, setUserAuth] = useState({
     firstname: "",
     lastname: "",
     type: "",
@@ -30,7 +31,9 @@ const Contact = () => {
     phone_number: ""
   });
   const [err, setErr] = useState('')
+  const [success, setSuccess] = useState('')
   const navigate = useNavigate()
+  const {setUser} = useContext(UserAuth)
 
   const handleJustifyClick = (value) => {
     if (value === justifyActive) {
@@ -44,7 +47,16 @@ const Contact = () => {
     if (user.password === user.confirm_pass) {
       const req = await registerUser(user);
       if (req.success) {
-        console.log(req);
+        setUserAuth({
+          firstname: "",
+          lastname: "",
+          type: "",
+          email: "",
+          password: "",
+          confirm_pass: "",
+          phone_number: "",
+        });
+        setSuccess('Vous avex etez enregistré avec success. veuillez vous connecter.')
       } else {
         setErr(req.message);
       }
@@ -55,15 +67,21 @@ const Contact = () => {
     e.preventDefault();
     const req = await loginUser(user.email, user.password);
     if (req.success){
-      localStorage.setItem('token', req.data.token)
-      navigate("/instructors", { replace: true });
+      localStorage.setItem("askoToken", req.data.authorisation.token);
+      if (req.data.user.user_type === "teacher" || "coach") {
+        setUser(req.data.user);
+        navigate("/instructors", { replace: true });
+      }
+      if (req.data.user.user_type === "student") {
+        navigate("/programs", { replace: true });
+      }
     } else {
       setErr(req.message)
     }
   };
 
   const handleChange = (e) => {
-    setUser({ ...user, [e.target.name]: e.target.value });
+    setUserAuth({ ...user, [e.target.name]: e.target.value });
   };
 
   return (
@@ -181,7 +199,8 @@ const Contact = () => {
                     En cliquant sur S'inscrire, vous acceptez nos Conditions
                     d'utilisation et notre Politique de confidentialité.
                   </p>
-                  {err && <Alert type="alert-warning" message={err} />}
+                  <p className="text-success fw-bold">{success}</p>
+
                   <MDBBtn className="tp-btn-3 mb-3" type="submit">
                     Creer un compte
                   </MDBBtn>
