@@ -1,4 +1,7 @@
-import { lazy } from "react";
+import { lazy, Suspense } from "react";
+
+// Spinner
+import Loading from "../components/Loading";
 
 // Public
 import Home from '../pages/Home'
@@ -25,13 +28,69 @@ export const publicRoutes = [
 
 export const protectedRoutes = [
   // Instructors
-  { path: "/instructors", component: <Instructors />, index: false },
-  { path: "/clients", component: <Client />, index: false },
-  { path: "/activity", component: <Activity />, index: false },
-  { path: "/broadcasting", component: <BroadCasting />, index: false },
-  { path: "/reports", component: <Reports />, index: false },
+  {
+    path: "/instructors",
+    component: (
+      <Suspense fallback={<Loading />}>
+        <Instructors />
+      </Suspense>
+    ),
+    index: false,
+  },
+  {
+    path: "/clients",
+    component: (
+      <Suspense fallback={<Loading />}>
+        <Client />
+      </Suspense>
+    ),
+    index: false,
+  },
+  {
+    path: "/activity",
+    component: (
+      <Suspense fallback={<Loading />}>
+        <Activity />
+      </Suspense>
+    ),
+    index: false,
+  },
+  {
+    path: "/broadcasting",
+    component: (
+      <Suspense fallback={<Loading />}>
+        <BroadCasting />
+      </Suspense>
+    ),
+    index: false,
+  },
+  {
+    path: "/reports",
+    component: (
+      <Suspense fallback={<Loading />}>
+        <Reports />
+      </Suspense>
+    ),
+    index: false,
+  },
 
   // Students or Clients
-  { path: "/meeting", component: <Meeting />, index: false },
-  { path: "/programs", component: <Program />, index: false },
+  {
+    path: "/meeting",
+    component: (
+      <Suspense fallback={<Loading />}>
+        <Meeting />
+      </Suspense>
+    ),
+    index: false,
+  },
+  {
+    path: "/programs",
+    component: (
+      <Suspense fallback={<Loading />}>
+        <Program />
+      </Suspense>
+    ),
+    index: false,
+  },
 ];

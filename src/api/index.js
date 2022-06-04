@@ -1,4 +1,4 @@
-const API_URL = "http://tenant.devlabcenter.com/api/v1";
+const API_URL = "https://tenant.devlabcenter.com/api/v1";
 
 export const registerUser = (params) => {
   return new Promise((resolve, reject) => {
