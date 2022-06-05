@@ -11,10 +11,10 @@ const InstructorLayout = ({ title, children }) => {
       </Helmet>
       <div className="container-fluid">
         <div className="row">
-          <div className="col-2">
+          <div className="col-1">
             <InstructorMenu />
           </div>
-          <div className="col">{children}</div>
+          <div className="col p-5 bg-dark" style={{height: 'auto'}}>{children}</div>
         </div>
       </div>
     </Fragment>

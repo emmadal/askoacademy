@@ -1,4 +1,6 @@
 import "./styles/custom.css";
+import "react-calendar/dist/Calendar.css";
+
 import React, {
   useId,
   useEffect,

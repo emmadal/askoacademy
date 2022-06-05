@@ -31,11 +31,6 @@ const InstructorMenu = () => {
             </Link>
           </li>
           <li className="py-3">
-            <Link to="/clients" className="link">
-              <i className="fas fa-user-friends"> Clients</i>
-            </Link>
-          </li>
-          <li className="py-3">
             <Link to="/activity" className="link">
               <i className="fas fa-tachometer-alt"> Activité</i>
             </Link>
