@@ -1,10 +1,8 @@
-import { memo, useContext, useState } from "react";
-import { UserAuth } from "../App";
+import { memo, useState } from "react";
 import {
   MDBCard,
   MDBCardBody,
   MDBCardTitle,
-  MDBCardText,
   MDBRow,
   MDBCol,
   MDBBtn,
@@ -30,16 +28,17 @@ import TABLE_BODY from "../data/table.json";
 const STORY_HEADERS = [
   {
     prop: "name",
-    title: "Name",
+    title: "Nom",
     isFilterable: true,
   },
   {
     prop: "username",
-    title: "Username",
+    title: "Prénoms",
   },
   {
     prop: "location",
-    title: "Location",
+    title: "Profession",
+    isFilterable: true,
   },
   {
     prop: "date",
@@ -57,7 +56,6 @@ const STORY_HEADERS = [
 
 
 const Instructors = () => {
-  const { user } = useContext(UserAuth);
   const [value, onChange] = useState(new Date());
   const [centredModal, setCentredModal] = useState(false);
   const toggleShow = () => setCentredModal(!centredModal);
@@ -136,8 +134,8 @@ const Instructors = () => {
                         }}/>
                       </MDBCol>
                     </MDBRow>
-                    <MDBTable>
-                      <TableHeader />
+                    <MDBTable className="table-responsive">
+                      <TableHeader/>
                       <TableBody />
                     </MDBTable>
                   </DatatableWrapper>

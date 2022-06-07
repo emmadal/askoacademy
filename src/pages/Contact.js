@@ -16,7 +16,6 @@ import {
 } from "mdb-react-ui-kit";
 import { Link, useNavigate } from "react-router-dom";
 import { loginUser, registerUser } from "../api";
-import Alert from "../components/Alert";
 import { UserAuth } from "../App";
 
 const Contact = () => {

@@ -13,6 +13,7 @@ const Instructors = lazy(() => import("../pages/Instructors"));
 const BroadCasting = lazy(() => import("../pages/BroadCasting"));
 const Reports = lazy(() => import("../pages/Reports"));
 const Activity = lazy(() => import("../pages/Activity"));
+const Profile = lazy(() => import("../pages/Profile"));
 
 // Clients
 const Meeting = lazy(() => import("../pages/Meeting"));
@@ -41,6 +42,15 @@ export const protectedRoutes = [
     component: (
       <Suspense fallback={<Loading />}>
         <Activity />
+      </Suspense>
+    ),
+    index: false,
+  },
+  {
+    path: "/profil",
+    component: (
+      <Suspense fallback={<Loading />}>
+        <Profile />
       </Suspense>
     ),
     index: false,

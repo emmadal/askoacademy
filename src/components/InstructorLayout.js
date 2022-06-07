@@ -14,7 +14,7 @@ const InstructorLayout = ({ title, children }) => {
           <div className="col-1">
             <InstructorMenu />
           </div>
-          <div className="col p-5 bg-dark" style={{height: 'auto'}}>{children}</div>
+          <div className="col p-5 bg-light" style={{height: 'auto'}}>{children}</div>
         </div>
       </div>
     </Fragment>

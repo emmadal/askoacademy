@@ -12,7 +12,7 @@ const InstructorMenu = () => {
   return (
     <nav className="d-md-block bg-light sidebar collapse">
       <div className="position-sticky">
-        <ul className="nav flex-column p-2 align-items-center">
+        <ul className="nav flex-column p-2">
           <li className="py-3 ">
             <Link to="/instructors">
               <img
@@ -33,6 +33,11 @@ const InstructorMenu = () => {
           <li className="py-3">
             <Link to="/activity" className="link">
               <i className="fas fa-tachometer-alt"> Activité</i>
+            </Link>
+          </li>
+          <li className="py-3">
+            <Link to="/profil" className="link">
+              <i className="fas fa-user"> Profil</i>
             </Link>
           </li>
           <li className="py-3">
